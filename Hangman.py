@@ -96,11 +96,11 @@ def jeu():
   while run_mot:
     guess=[]
     mot_dict={}
-    mot=input("Quelle mot? ")
-    if len(mot)<63:
+    mot=input("Which word? (63 letters max)\nAccept all letters and the space : ")
+    if len(mot)<=63:
       run_mot=False
     else:
-      print("mot trop long") 
+      print("the word has more than 63 letters") 
   traits(mot)
   for i in mot:
     guess.append("")
@@ -159,8 +159,8 @@ while run:
 if V=="W":
   penup()
   goto(-190,50)
-  write("Bravo !")
+  write("GG you win !")
 else:
   penup()
   goto(-190,50)
-  write("Perdu, le mot etait "+mot)
+  write("You lose, the word was "+mot)
